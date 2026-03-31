@@ -1,0 +1,154 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    color: #ebe8c0;
+    background: url('images/fondo_roca.jpg') center/cover no-repeat;
+}
+
+/* HERO con fondo */
+.hero {
+    background: url('images/fondo.jpg') center/cover no-repeat;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeSlide 1s ease forwards;
+}
+
+.logo {
+    width: 220px;
+    max-width: 90%;
+}
+
+/* CONTENEDOR */
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    animation: fadeSlide 1.2s ease forwards;
+}
+
+/* INFO */
+.info {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ffe66a;
+    margin-bottom: 20px;
+}
+
+/* SECCIONES */
+.section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-family:'Permanent Marker', cursive;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #cb2020;
+    text-shadow: 1px 1px 0 #ffcc00;
+    margin-bottom: 5px;
+}
+
+.section-title::before {
+    content: "✦";
+    color: #ffcc00;
+    margin-right: 8px;
+}
+
+/* ITEMS */
+.item {
+    font-family:'Permanent Marker', cursive;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #444;
+    font-size: 0.95rem;
+}
+.item-chico {
+    font-family:'Permanent Marker', cursive;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 8px 0px;
+    border-bottom: 1px dashed #444;
+    font-size: 0.65rem;
+}
+
+.price {
+    font-family:'Permanent Marker', cursive;
+    color: #ffdc52;
+    
+}
+
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #ffe66a;
+}
+
+
+/* BOTÓN WHATSAPP */
+.whats-btn {
+    display: block;
+    text-align: center;
+    margin: 15px auto;
+    background:#199346;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    width: 80%;
+}
+
+/* BOTÓN MAPS */
+.maps-btn {
+    display: block;
+    text-align: center;
+    margin: 15px auto;
+    background: #ad1b1b;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    width: 80%;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+    .container {
+        max-width: 800px;
+    }
+}
